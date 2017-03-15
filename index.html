@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🇺🇸🇵🇷 WBC Pool F 🇻🇪🇩🇴</title>
+ <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"> 
+ <link href="../WBC/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+  <div class="panels">
+    <div class="panel panel1">
+      <p>Team</p>
+      <p>USA</p>
+      <p>United States</p>
+    </div>
+    <div class="panel panel2">
+      <p>Equipo</p>
+      <p>PR</p>
+      <p>Puerto Rico</p>
+    </div>
+    <div class="panel panel3">
+      <p>World</p>
+      <p>Baseball</p>
+      <p>Classic</p>
+    </div>
+    <div class="panel panel4">
+      <p>Equipo</p>
+      <p>Ven</p>
+      <p>Venezuela</p>
+    </div>
+    <div class="panel panel5">
+      <p>Equipo</p>
+      <p>RD</p>
+      <p>Dominicana</p>
+    </div>
+  </div>
+
+  <script>
+    const panels = document.querySelectorAll('.panel');
+    function toggleOpen() {
+      console.log('Hello');
+      this.classList.toggle('open');
+    }
+    function toggleActive(e) {
+      console.log(e.propertyName);
+      if (e.propertyName.includes('flex')) {
+        this.classList.toggle('open-active');
+      }
+    }
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+    panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+  </script>
+
+</body>
+</html>
